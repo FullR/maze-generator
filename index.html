@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Maze Generator</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/mblode/marx/master/css/marx.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div class="content">
+      <div class="canvas-wrapper">
+        <canvas id="canvas" width="500" height="500"/>
+      </div>
+
+      <div class="maze-gen-form-wrapper">
+        <p>Click and drag to draw lines in the maze</p>
+        <form class="maze-gen-settings">
+          <button class="clear-line-btn">Clear Drawn Lines</button>
+          <br/>
+
+          <label>Columns:</label>
+          <input type="number" class="column-input" min="0" max="10000"/>
+
+          <label>Rows:</label>
+          <input type="number" class="row-input" min="0" max="10000"/>
+          <br/>
+
+          <label>Width:</label>
+          <input type="number" class="width-input" min="0" max="10000"/>
+
+          <label>Height:</label>
+          <input type="number" class="height-input" min="0" max="10000"/>
+          <br/>
+
+          <label class="direction-bias-label">Directional biases:</label>
+          <br/>
+          <label>Up:</label><input type="number" step="0.01" min="0" max="1" class="up-bias-input"/>
+          <label>Down:</label><input type="number" step="0.01" min="0" max="1" class="down-bias-input"/>
+          <br/>
+          <label>Left:</label><input type="number" step="0.01" min="0" max="1" class="left-bias-input"/>
+          <label>Right:</label><input type="number" step="0.01" min="0" max="1" class="right-bias-input"/>
+
+          <div class="animate-steps-box">
+            <label class="animate-steps-label">Animate steps:</label>
+            <input class="animate-steps-checkbox" type="checkbox"/>
+          </div>
+
+          <div class="show-solution-box">
+            <label class="show-solution-label">Show solution:</label>
+            <input class="show-solution-checkbox" type="checkbox"/>
+          </div>
+          <button class="generate-btn">Generate</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+    <script src="https://rawgit.com/Reactive-Extensions/RxJS/master/dist/rx.all.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

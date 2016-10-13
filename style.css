@@ -1,0 +1,48 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.canvas-wrapper {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+canvas {
+  display: inline-block;
+}
+
+.clear-line-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.maze-gen-settings label {
+  display: inline-block;
+  min-width: 80px;
+}
+
+.maze-gen-form-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.maze-gen-settings {
+  text-align: left;
+  display: inline-block;
+}
+
+.maze-gen-form-wrapper,
+.direction-bias-label,
+.animate-steps-box,
+.generate-btn {
+  margin-top: 20px;
+}
